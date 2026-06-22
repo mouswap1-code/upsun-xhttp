@@ -2,7 +2,7 @@ const http = require('http');
 const https = require('https');
 
 const VPS_HOST = '188.213.28.174';
-const VPS_PORT = 443;
+const VPS_PORT = 80;
 const UUID = 'cf4cbdae-91f7-4e55-abbe-40ae5391d833';
 const PORT = process.env.PORT || 8080;
 
