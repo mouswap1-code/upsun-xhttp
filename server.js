@@ -1,9 +1,9 @@
 const http = require('http');
 
 // === CONFIGURATION ===
-const VPS_HOST = 'ultrategateworld.benbilal237free.xyz';
+const VPS_HOST = '188.213.28.174';
 const VPS_PORT = 80;
-const UUID = 'f09a960a-4f1b-495f-9962-f1a14e5a7791';
+const UUID = 'cf4cbdae-91f7-4e55-abbe-40ae5391d833';
 const VPS_IP = '188.213.28.174';
 const PORT = process.env.PORT || 8080;
 
@@ -11,7 +11,7 @@ const XHTTP_PATH = '/';
 const XHTTP_MODE = 'auto';
 const XHTTP_PADDING = '100-1000';
 const HOST_HEADER = 'ultrategateworld.benbilal237free.xyz';
-const SNI = 'main-xxxxx.fr-3.platformsh.site';
+const SNI = 'main-bvxea6i-jjxw6l5yj6f7q.fr-3.platformsh.site';
 const ALPN = ['h2', 'http/1.1', 'h3'];
 const FP = 'chrome';
 
