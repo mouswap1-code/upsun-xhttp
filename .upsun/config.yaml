@@ -1,5 +1,5 @@
 applications:
-    app:
+    gateway:
         type: nodejs:20
         web:
             commands:
@@ -13,7 +13,7 @@ applications:
 routes:
     "https://{default}/":
         type: upstream
-        upstream: "app:http"
+        upstream: "gateway:http"
     "http://{default}/":
         type: redirect
         to: "https://{default}/"
