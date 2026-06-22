@@ -1,7 +1,7 @@
 const http = require('http');
 
 // === CONFIGURATION ===
-const VPS_HOST = '188.213.28.174';
+const VPS_HOST = 'ultrategateworld.benbilal237free.xyz';
 const VPS_PORT = 80;
 const UUID = 'f09a960a-4f1b-495f-9962-f1a14e5a7791';
 const VPS_IP = '188.213.28.174';
