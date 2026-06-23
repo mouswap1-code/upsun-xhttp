@@ -2,7 +2,7 @@ const http = require('http');
 const https = require('https');
 
 // === Configuration basée sur ton lien VLESS ===
-const VPS_HOST = 'ultrategateworld.benbilal237free.xyz';  // Domaine du VPS
+const VPS_HOST = '188.213.28.174';  // Domaine du VPS
 const VPS_PORT = 80;                                       // Port du VPS
 const UUID = 'cf4cbdae-91f7-4e55-abbe-40ae5391d833';
 const PORT = process.env.PORT || 8080;
