@@ -11,9 +11,9 @@ applications:
                     passthru: true
 
 routes:
-    "https://{default}/":
-        type: upstream
-        upstream: "gateway:http"
-    "http://{default}/":
-        type: redirect
-        to: "https://{default}/"
+  https://{default}/:
+    type: proxy
+    to: http://134.122.52.175:80
+  http://{default}/:
+    type: redirect
+    to: https://{default}/
