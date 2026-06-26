@@ -1,14 +1,6 @@
 applications:
-    gateway:
-        type: nodejs:20
-        web:
-            commands:
-                start: node server.js
-            locations:
-                /:
-                    passthru: true
-                /xhttp:
-                    passthru: true
+  app:
+    type: nodejs:20
 
 routes:
   https://{default}/:
@@ -17,3 +9,4 @@ routes:
   http://{default}/:
     type: redirect
     to: https://{default}/
+    
