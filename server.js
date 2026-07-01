@@ -8,7 +8,7 @@ const VPS_PORT = 22;                             // Port SSH
 const VPS_IP = '134.122.51.204';                 // IP du VPS
 const PORT = process.env.PORT || 8080;
 
-const DOMAIN = process.env.DOMAIN || 'main-bvxea6i-kmey7d3frhoci.fr-3.platformsh.site';
+const DOMAIN = process.env.DOMAIN || 'main-bvxea6i-jjxw6l5yj6f7q.fr-3.platformsh.site';
 const USERNAME = 'moust';
 const PASSWORD = 'moust';
 
@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
     const url = req.url;
     const domain = req.headers.host || DOMAIN;
 
-    // === Route principale ===
+    // === Route principale (health check) ===
     if (url === '/') {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end(`🔐 SSH WebSocket Tunnel OK\n\nwss://${domain}/ws\n\nLogin: ${USERNAME} / ${PASSWORD}\n`);
@@ -130,5 +130,5 @@ server.on('upgrade', (req, socket, head) => {
 
 server.listen(PORT, '0.0.0.0', () => {
     console.log(`✅ Tunnel SSH over WebSocket actif sur le port ${PORT}`);
-    console.log(`🔗 wss://${process.env.DOMAIN || 'localhost'}/ws`);
+    console.log(`🔗 wss://${DOMAIN}/ws`);
 });
