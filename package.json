@@ -1,0 +1,8 @@
+{
+  "name": "ssh-websocket",
+  "version": "1.0.0",
+  "description": "SSH over WebSocket tunnel for Upsun",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
