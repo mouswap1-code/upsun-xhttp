@@ -1,12 +1,19 @@
 applications:
   app:
     type: nodejs:20
+    web:
+      commands:
+        start: node server.js
+      locations:
+        /:
+          passthru: true
+        /ws:
+          passthru: true
 
 routes:
-  https://{default}/:
-    type: proxy
-    to: http://134.122.52.175:80
-  http://{default}/:
+  "https://{default}/":
+    type: upstream
+    upstream: "app:http"
+  "http://{default}/":
     type: redirect
-    to: https://{default}/
-    
+    to: "https://{default}/"
