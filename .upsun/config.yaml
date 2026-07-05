@@ -4,16 +4,8 @@ applications:
     web:
       commands:
         start: node server.js
-      locations:
-        /:
-          passthru: true
-        /ws:
-          passthru: true
 
 routes:
   "https://{default}/":
     type: upstream
     upstream: "app:http"
-  "http://{default}/":
-    type: redirect
-    to: "https://{default}/"
