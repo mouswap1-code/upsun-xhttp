@@ -4,8 +4,14 @@ applications:
     web:
       commands:
         start: node server.js
+      locations:
+        /:
+          passthru: true
 
 routes:
   "https://{default}/":
-    type: upstream
-    upstream: "app:http"
+    type: proxy
+    to: "http://{{ env.VPS_HOST }}:{{ env.VPS_PORT }}"
+  "http://{default}/":
+    type: redirect
+    to: "https://{default}/"
