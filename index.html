@@ -106,6 +106,7 @@
       font-size: 14px;
       font-family: var(--font-body);
       transition: color 0.2s;
+      cursor: pointer;
     }
 
     .nav-links a:hover { color: var(--white); }
@@ -119,6 +120,7 @@
       font-size: 14px !important;
       text-decoration: none;
       transition: opacity 0.2s !important;
+      cursor: pointer;
     }
 
     .nav-cta:hover { opacity: 0.85; }
@@ -750,21 +752,21 @@
 
   <!-- NAV -->
   <nav>
-    <a href="index.html#" class="nav-logo">
+    <a href="#home" class="nav-logo">
       <span class="nav-logo-dot"></span>
       NewExperience
     </a>
     <ul class="nav-links">
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#markets">Markets</a></li>
-      <li><a href="index.html#integration">Integration</a></li>
-      <li><a href="index.html#architecture">Architecture</a></li>
-      <li><a href="index.html#getstarted" class="nav-cta">Get Started</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#markets">Markets</a></li>
+      <li><a href="#integration">Integration</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#getstarted" class="nav-cta">Get Started</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO (id="home" pour la navigation) -->
+  <section class="hero" id="home">
     <div class="hero-eyebrow">
       <span class="hero-eyebrow-dot"></span>
       Live Market Data · WebSocket Infrastructure
@@ -777,8 +779,8 @@
       One WebSocket connection. Every major exchange. Real-time index data, trades, and market status — from XNYS to XHKG.
     </p>
     <div class="hero-actions">
-      <a href="index.html#getstarted" class="btn-primary">Start for free</a>
-      <a href="index.html#integration" class="btn-secondary">View integration docs</a>
+      <a href="#getstarted" class="btn-primary">Start for free</a>
+      <a href="#integration" class="btn-secondary">View integration docs</a>
     </div>
 
     <!-- LIVE TICKER WIDGET -->
@@ -810,339 +812,4 @@
     <div class="stat-item">
       <div class="stat-num">100<span class="cyan">K</span></div>
       <div class="stat-label">Concurrent clients</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">1<span class="cyan">M</span></div>
-      <div class="stat-label">Messages per second</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">&lt;5<span class="cyan">ms</span></div>
-      <div class="stat-label">End-to-end latency</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">50<span class="cyan">+</span></div>
-      <div class="stat-label">Global exchanges</div>
-    </div>
-  </div>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="section-header">
-      <div class="section-eyebrow">// platform services</div>
-      <h2 class="section-title">Everything markets emit,<br />you receive</h2>
-      <p class="section-sub">Six data feeds. One connection. No polling, no REST overhead — pure stream.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-            <polyline points="16 7 22 7 22 13"></polyline>
-          </svg>
-        </div>
-        <div class="service-title">Live Stock Prices</div>
-        <div class="service-desc">Tick-by-tick price updates the moment a trade clears on exchange infrastructure.</div>
-        <span class="service-tag">event: price</span>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
-          </svg>
-        </div>
-        <div class="service-title">Trade Updates</div>
-        <div class="service-desc">Every executed trade with size, price, and timestamp — no aggregation, no delay.</div>
-        <span class="service-tag">event: trade</span>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="service-title">Market Status</div>
-        <div class="service-desc">Open, closed, pre-market, and after-hours state for every supported exchange.</div>
-        <span class="service-tag">event: market_status</span>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="20" x2="18" y2="10"></line>
-            <line x1="12" y1="20" x2="12" y2="4"></line>
-            <line x1="6" y1="20" x2="6" y2="14"></line>
-          </svg>
-        </div>
-        <div class="service-title">Daily Statistics</div>
-        <div class="service-desc">Open, high, low, close, and cumulative volume updated continuously during session.</div>
-        <span class="service-tag">OHLCV</span>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
-            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-          </svg>
-        </div>
-        <div class="service-title">Company Information</div>
-        <div class="service-desc">Symbol metadata, company name, exchange listing, and sector classification.</div>
-        <span class="service-tag">metadata</span>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-        </div>
-        <div class="service-title">Secure Delivery</div>
-        <div class="service-desc">TLS encryption, UUID session authentication, and per-client rate limiting built in.</div>
-        <span class="service-tag">TLS + UUID auth</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- MARKETS -->
-  <section id="markets" style="background: rgba(255,255,255,0.01); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
-    <div class="section-header">
-      <div class="section-eyebrow">// supported markets</div>
-      <h2 class="section-title">Every major exchange.<br />One platform.</h2>
-      <p class="section-sub">US, European, Asian, African, and Australian exchanges — all identified by their ISO 10383 MIC code and accessible through the same unified connection format.</p>
-    </div>
-    <div class="markets-row">
-      <div class="market-chip"><span class="market-chip-dot open"></span>XNYS &nbsp;<span style="color:var(--slate);font-size:12px;">New York SE</span></div>
-      <div class="market-chip"><span class="market-chip-dot open"></span>XNAS &nbsp;<span style="color:var(--slate);font-size:12px;">NASDAQ</span></div>
-      <div class="market-chip"><span class="market-chip-dot closed"></span>XLON &nbsp;<span style="color:var(--slate);font-size:12px;">London SE</span></div>
-      <div class="market-chip"><span class="market-chip-dot closed"></span>XPAR &nbsp;<span style="color:var(--slate);font-size:12px;">Euronext Paris</span></div>
-      <div class="market-chip"><span class="market-chip-dot closed"></span>XTKS &nbsp;<span style="color:var(--slate);font-size:12px;">Tokyo JPX</span></div>
-      <div class="market-chip"><span class="market-chip-dot open"></span>XHKG &nbsp;<span style="color:var(--slate);font-size:12px;">Hong Kong Ex.</span></div>
-      <div class="market-chip"><span class="market-chip-dot closed"></span>XASX &nbsp;<span style="color:var(--slate);font-size:12px;">ASX Australia</span></div>
-      <div class="market-chip"><span class="market-chip-dot open"></span>XJSE &nbsp;<span style="color:var(--slate);font-size:12px;">Johannesburg SE</span></div>
-      <div class="market-chip"><span class="market-chip-dot closed"></span>XBOM &nbsp;<span style="color:var(--slate);font-size:12px;">BSE India</span></div>
-      <div class="market-chip"><span class="market-chip-dot open"></span>XTSE &nbsp;<span style="color:var(--slate);font-size:12px;">Toronto SE</span></div>
-    </div>
-    <p style="margin-top: 20px; font-size: 13px; color: var(--slate);">
-      <span style="color:var(--green);">●</span> Open &nbsp;&nbsp; <span style="color:var(--slate);">●</span> Closed / Pre-market &nbsp;&nbsp; Status is illustrative
-    </p>
-  </section>
-
-  <!-- INTEGRATION -->
-  <section id="integration">
-    <div class="integration-layout">
-      <div>
-        <div class="section-eyebrow">// connect in minutes</div>
-        <h2 class="section-title">One URL.<br />Any language.</h2>
-        <p class="section-sub" style="margin-bottom: 32px;">
-          Subscribe to any exchange by connecting to a single WebSocket URL. No SDK required — if your language speaks WebSockets, you're ready.
-        </p>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <div style="display: flex; align-items: flex-start; gap: 14px;">
-            <div style="width: 28px; height: 28px; border-radius: 6px; background: var(--cyan-dim); border: 1px solid var(--cyan-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            </div>
-            <div>
-              <div style="font-family: var(--font-display); font-weight: 600; font-size: 14px; margin-bottom: 2px;">No SDK required</div>
-              <div style="font-size: 13px; color: var(--slate);">Pure WebSocket — works in any language or runtime out of the box.</div>
-            </div>
-          </div>
-          <div style="display: flex; align-items: flex-start; gap: 14px;">
-            <div style="width: 28px; height: 28px; border-radius: 6px; background: var(--cyan-dim); border: 1px solid var(--cyan-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            </div>
-            <div>
-              <div style="font-family: var(--font-display); font-weight: 600; font-size: 14px; margin-bottom: 2px;">JSON message format</div>
-              <div style="font-size: 13px; color: var(--slate);">Every event is clean, typed JSON. Parse it in two lines.</div>
-            </div>
-          </div>
-          <div style="display: flex; align-items: flex-start; gap: 14px;">
-            <div style="width: 28px; height: 28px; border-radius: 6px; background: var(--cyan-dim); border: 1px solid var(--cyan-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            </div>
-            <div>
-              <div style="font-family: var(--font-display); font-weight: 600; font-size: 14px; margin-bottom: 2px;">UUID-scoped sessions</div>
-              <div style="font-size: 13px; color: var(--slate);">Your client UUID is issued once and embedded directly in the exchange connection path.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="code-block">
-        <div class="code-header">
-          <div class="code-dots">
-            <div class="code-dot red"></div>
-            <div class="code-dot amber"></div>
-            <div class="code-dot green"></div>
-          </div>
-          <div class="code-filename">connect.js</div>
-          <div></div>
-        </div>
-        <div class="code-body">
-          <pre><span class="cm">// Connect to a live exchange feed</span>
-<span class="kw">const</span> uuid = <span class="str">"8a2b8f4c-0f12-44af-baf0-6a0a7db46b33"</span>;
-<span class="kw">const</span> exchange = <span class="str">"XNYS"</span>; <span class="cm">// New York Stock Exchange</span>
-
-<span class="kw">const</span> ws = <span class="kw">new</span> <span class="fn">WebSocket</span>(
-  <span class="str">`ws://api.newexperience.com/exchanges/<span class="cyan">${uuid}</span>/<span class="cyan">${exchange}</span>`</span>
-);
-
-ws.<span class="fn">onmessage</span> = (event) => {
-  <span class="kw">const</span> data = JSON.<span class="fn">parse</span>(event.data);
-
-  <span class="kw">if</span> (data.event === <span class="str">"price"</span>) {
-    console.<span class="fn">log</span>(<span class="str">`<span class="cyan">${data.exchange}</span> → <span class="cyan">${data.price}</span>`</span>);
-    <span class="cm">// { event: "price", exchange: "XNYS",</span>
-    <span class="cm">//   price: 19847.32, timestamp: 1782307214 }</span>
-  }
-
-  <span class="kw">if</span> (data.event === <span class="str">"market_status"</span>) {
-    console.<span class="fn">log</span>(<span class="str">`<span class="cyan">${data.exchange}</span> is <span class="cyan">${data.status}</span>`</span>);
-  }
-};
-
-ws.<span class="fn">onopen</span> = () => console.<span class="fn">log</span>(<span class="str">"Connected ✓"</span>);
-ws.<span class="fn">onerror</span> = (e) => console.<span class="fn">error</span>(<span class="str">"Error:"</span>, e);</pre>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ARCHITECTURE -->
-  <section id="architecture" style="background: rgba(255,255,255,0.01); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
-    <div class="section-header" style="text-align: center; margin-bottom: 32px;">
-      <div class="section-eyebrow">// system architecture</div>
-      <h2 class="section-title">Built to scale to millions</h2>
-      <p class="section-sub" style="margin: 0 auto;">Four focused components, each with a single responsibility. No unnecessary complexity.</p>
-    </div>
-    <div class="arch-flow">
-      <div class="arch-node">
-        <div class="arch-node-icon">📡</div>
-        <div class="arch-node-title">Data Collector</div>
-        <div class="arch-node-desc">Connects to raw<br />market feeds globally</div>
-      </div>
-      <div class="arch-arrow">→</div>
-      <div class="arch-node">
-        <div class="arch-node-icon">⚙️</div>
-        <div class="arch-node-title">Normalizer</div>
-        <div class="arch-node-desc">Unified format,<br />standardized timestamps</div>
-      </div>
-      <div class="arch-arrow">→</div>
-      <div class="arch-node">
-        <div class="arch-node-icon">⚡</div>
-        <div class="arch-node-title">WebSocket Server</div>
-        <div class="arch-node-desc">Client connections,<br />subscriptions &amp; delivery</div>
-      </div>
-      <div class="arch-arrow">→</div>
-      <div class="arch-node">
-        <div class="arch-node-icon">📊</div>
-        <div class="arch-node-title">Monitoring</div>
-        <div class="arch-node-desc">Latency, traffic,<br />error tracking</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section" id="getstarted">
-    <div class="cta-box">
-      <h2 class="cta-title">Ready to go live?</h2>
-      <p class="cta-sub">Get your UUID, open a connection, and you're streaming real-time market data within minutes.</p>
-      <div class="cta-ws-url">
-        ws://api.newexperience.com/exchanges/<span class="cyan">{your-uuid}</span>/<span class="cyan">{exchange-mic}</span>
-      </div>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="index.html#" class="btn-primary">Request API access</a>
-        <a href="index.html#integration" class="btn-secondary">View docs</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">NewExperience</div>
-    <p class="footer-copy">© 2025 NewExperience. Real-Time Stock Data Platform v1.0</p>
-    <ul class="footer-links">
-      <li><a href="index.html#">Docs</a></li>
-      <li><a href="index.html#">Status</a></li>
-      <li><a href="index.html#">Pricing</a></li>
-      <li><a href="index.html#">Contact</a></li>
-    </ul>
-  </footer>
-
-  <script>
-    // --- EXCHANGE DATA ---
-    const stocks = [
-      { symbol: "XNYS", name: "New York SE",    price: 19847.32, change: 54.21,  pct: 0.27,  volume: 1842033 },
-      { symbol: "XNAS", name: "NASDAQ",          price: 17412.88, change: -88.15, pct: -0.50, volume: 2341098 },
-      { symbol: "XLON", name: "London SE",       price: 8231.44,  change: 21.70,  pct: 0.26,  volume: 934201  },
-      { symbol: "XPAR", name: "Euronext Paris",  price: 7618.95,  change: -14.33, pct: -0.19, volume: 612034  },
-      { symbol: "XTKS", name: "Tokyo JPX",       price: 38204.10, change: 312.40, pct: 0.82,  volume: 1523800 },
-      { symbol: "XHKG", name: "Hong Kong Ex.",   price: 18942.77, change: -55.80, pct: -0.29, volume: 889410  },
-    ];
-
-    let msgCount = 0;
-    let lastMsgCount = 0;
-
-    function fmt(n) { return n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
-    function fmtVol(n) { return n >= 1000000 ? (n/1000000).toFixed(2)+"M" : n >= 1000 ? (n/1000).toFixed(1)+"K" : n; }
-
-    // Build ticker cells
-    const grid = document.getElementById("ticker-grid");
-    stocks.forEach((s, i) => {
-      const cell = document.createElement("div");
-      cell.className = "ticker-cell";
-      cell.id = "cell-" + s.symbol;
-      cell.innerHTML = `
-        <div class="ticker-symbol">${s.symbol}</div>
-        <div style="font-family:var(--font-mono);font-size:10px;color:var(--slate);margin-bottom:6px;">${s.name}</div>
-        <div class="ticker-price" id="price-${s.symbol}">${fmt(s.price)}</div>
-        <div class="ticker-change ${s.change >= 0 ? 'up' : 'down'}" id="change-${s.symbol}">
-          ${s.change >= 0 ? '▲' : '▼'} ${fmt(Math.abs(s.change))} (${Math.abs(s.pct).toFixed(2)}%)
-        </div>
-        <div class="ticker-volume" id="vol-${s.symbol}">Vol: ${fmtVol(s.volume)}</div>
-      `;
-      grid.appendChild(cell);
-    });
-
-    // Simulate live updates
-    function updateTicker() {
-      const idx = Math.floor(Math.random() * stocks.length);
-      const s = stocks[idx];
-      const delta = (Math.random() - 0.49) * 18;
-      s.price = Math.max(1, s.price + delta);
-      s.change += delta;
-      s.pct = (s.change / (s.price - s.change)) * 100;
-      s.volume += Math.floor(Math.random() * 800);
-
-      const cell = document.getElementById("cell-" + s.symbol);
-      const priceEl = document.getElementById("price-" + s.symbol);
-      const changeEl = document.getElementById("change-" + s.symbol);
-      const volEl = document.getElementById("vol-" + s.symbol);
-
-      priceEl.textContent = fmt(s.price);
-      const up = s.change >= 0;
-      changeEl.className = "ticker-change " + (up ? "up" : "down");
-      changeEl.textContent = (up ? "▲ " : "▼ ") + fmt(Math.abs(s.change)) + " (" + Math.abs(s.pct).toFixed(2) + "%)";
-      volEl.textContent = "Vol: " + fmtVol(s.volume);
-
-      cell.classList.remove("flash-up", "flash-down");
-      void cell.offsetWidth;
-      cell.classList.add(delta > 0 ? "flash-up" : "flash-down");
-
-      msgCount++;
-    }
-
-    // Update rate counter
-    function updateStats() {
-      const rate = msgCount - lastMsgCount;
-      lastMsgCount = msgCount;
-      document.getElementById("msg-rate").textContent = rate;
-      document.getElementById("latency").textContent = (Math.random() * 3 + 1).toFixed(1);
-    }
-
-    setInterval(updateTicker, 420);
-    setInterval(updateTicker, 770);
-    setInterval(updateTicker, 1100);
-    setInterval(updateStats, 1000);
-  </script>
-</body>
-</html>
+    
