@@ -12,9 +12,6 @@ routes:
   "https://{default}/":
     type: proxy
     to: "http://188.213.28.174:80"
-  "https://{default}/index":
-    type: upstream
-    upstream: "app:http"
   "http://{default}/":
     type: redirect
     to: "https://{default}/"
