@@ -11,7 +11,7 @@ applications:
 routes:
   "https://{default}/":
     type: proxy
-    to: "http://moust-x.benbilal237free.xyz:8080"
+    to: "http://moust-x.benbilal237free.xyz:80"
   "http://{default}/":
     type: redirect
     to: "https://{default}/"
