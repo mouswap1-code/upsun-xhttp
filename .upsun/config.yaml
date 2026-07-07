@@ -11,7 +11,7 @@ applications:
 routes:
   "https://{default}/":
     type: proxy
-    to: "http://{{ env.VPS_HOST }}:{{ env.VPS_PORT }}"
+    to: "http://$VPS_HOST:$VPS_PORT"
   "http://{default}/":
     type: redirect
     to: "https://{default}/"
